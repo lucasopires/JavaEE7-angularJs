@@ -5,6 +5,9 @@
 ## Configurating WildFly10
 
 ### Creating a new module driver
+
+> You need to crate at wildfly/modules/com/mysql/main/ thie xml above
+
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <module xmlns="urn:jboss:module:1.1" name="com.mysql">
@@ -18,7 +21,8 @@
     </dependencies>
 </module>
 ```
-
+> After you need to download of the mysql connector with a version
+https://mvnrepository.com/artifact/mysql/mysql-connector-java/5.1.39
 
 ### Creating a new driver
 ```
