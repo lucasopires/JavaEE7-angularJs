@@ -1,1 +1,38 @@
 # JavaEE7-angularJs
+
+> First you need to create a new schema with name "ATENDIMENTO_DB" in your mysql database
+
+## Configurating WildFly10
+
+### Creating a new module driver
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<module xmlns="urn:jboss:module:1.1" name="com.mysql">
+    <resources>
+        <resource-root path="mysql-connector-java-5.1.39.jar"/>
+    </resources>
+    <dependencies>
+        <module name="javax.api"/>
+        <module name="javax.transaction.api"/>
+        <module name="javax.servlet.api" optional="true"/>
+    </dependencies>
+</module>
+```
+
+
+### Creating a new driver
+```
+<driver name="mysql" module="com.mysql">
+    <xa-datasource-class>com.mysql.jdbc.jdbc2.optional.MysqlXADataSource</xa-datasource-class>
+</driver>
+```
+
+### Creating a new datasource
+<datasource jndi-name="java:jboss/datasources/ATENDIMENTO_DB" pool-name="ATENDIMENTO_DB" enabled="true" use-java-context="true">
+    <connection-url>jdbc:mysql://localhost:3306/ATENDIMENTO_DB</connection-url>
+    <driver>mysql</driver>
+    <security>
+        <user-name>root</user-name>
+        <password>almoXarifado</password>
+    </security>
+</datasource>
