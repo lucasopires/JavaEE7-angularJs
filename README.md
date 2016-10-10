@@ -28,6 +28,7 @@
 ```
 
 ### Creating a new datasource
+```
 <datasource jndi-name="java:jboss/datasources/ATENDIMENTO_DB" pool-name="ATENDIMENTO_DB" enabled="true" use-java-context="true">
     <connection-url>jdbc:mysql://localhost:3306/ATENDIMENTO_DB</connection-url>
     <driver>mysql</driver>
@@ -36,3 +37,4 @@
         <password>almoXarifado</password>
     </security>
 </datasource>
+```
