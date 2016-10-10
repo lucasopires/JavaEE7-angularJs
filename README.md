@@ -1,12 +1,13 @@
 # JavaEE7-angularJs
 
-> First you need to create a new schema with name "ATENDIMENTO_DB" in your mysql database
+> First, you need to create a new schema with name "ATENDIMENTO_DB" in your database
 
-## Configurating WildFly10
+##Example 
+## Configuring WildFly10
 
 ### Creating a new module driver
 
-> You need to crate at wildfly/modules/com/mysql/main/ thie xml above
+> You need to create at wildfly/modules/com/mysql/main/ the xml below
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -21,7 +22,7 @@
     </dependencies>
 </module>
 ```
-> After you need to download of the mysql connector with a version
+> After that, you need to download of the mysql connector with a version and save in the same directory above
 https://mvnrepository.com/artifact/mysql/mysql-connector-java/5.1.39
 
 ### Creating a new driver
